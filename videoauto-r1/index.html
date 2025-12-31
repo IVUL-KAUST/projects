@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="keywords" content="VideoAuto-R1, Video Auto Reasoning, Thinking Once, Answering Twice"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VideoAuto-R1</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">VideoAuto-R1: Video Auto Reasoning via Thinking Once, Answering
+              Twice</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://sming256.github.io/">Shuming Liu</a><sup>1,2,*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://metauto.ai/">Mingchen Zhuge</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=bXnrlyAAAAAJ&hl=en">Changsheng Zhao</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://junchen14.github.io/">Jun Chen</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=PCDSl2sAAAAJ&hl=en">Lemeng Wu</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://zechunliu.com/">Zechun Liu</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/andrew.cmu.edu/zcckernel">Chenchen Zhu</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=AZNUIDAAAAAJ&hl=en">Zhipeng Cai</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://chongzhou96.github.io/">Chong Zhou</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://haozheliu-st.github.io/">Haozhe Liu</a><sup>1,2</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=FbR5cAMAAAAJ&hl=en">Ernie Chang</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.umd.edu/~sakshams/">Saksham Suri</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://hyxu2006.github.io/">Hongyu Xu</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://qi-qian.com/">Qi Qian</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://wenwei202.github.io/">Wei Wen</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=fCqk928AAAAJ&hl=en">Balakrishnan
+                  Varadarajan</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://liuzhuang13.github.io/">Zhuang Liu</a><sup>3</sup>
+              </span>
+              <span class="author-block">
+                <a
+                  href="https://scholar.google.com/citations?hl=en&user=SaH2yWMAAAAJ&view_op=list_works&sortby=pubdate">Hu
+                  Xu</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=OADfWhUAAAAJ&hl=en">Florian Bordes</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=F1mr9C0AAAAJ&hl=en">Raghuraman
+                  Krishnamoorthi</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://www.bernardghanem.com/">Bernard Ghanem</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://v-chandra.github.io/">Vikas Chandra</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=k5FaRwcAAAAJ&hl=en">Yunyang Xiong</a><sup>1,†</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Meta AI,</span>
+              <span class="author-block"><sup>2</sup>King Abdullah University of Science and Technology (KAUST),</span>
+              <span class="author-block"><sup>3</sup>Princeton University</span>
+            </div>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>*</sup>Work done at Meta,</span>
+              <span class="author-block"><sup>†</sup>Project lead</span>
+            </div>
+
+            <div class="logos">
+              <img src="static/images/meta-logo.png" style="width: auto; height: 120px; vertical-align: middle;">
+              <img src="static/images/kaust-logo.png" style="width: auto; height: 120px; vertical-align: middle;">
+              <img src="static/images/princeton-logo.png" style="width: auto; height: 60px; vertical-align: middle;">
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/xxxx.xxxx" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/IVUL-KAUST/VideoAuto-R1/"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Model Link. -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/collections/IVUL-KAUST/videoauto-r1"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">🤗</span>
+                    <span>Models</span>
+                  </a>
+                </span>
+                <!-- Data Link. -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/IVUL-KAUST/VideoAuto-R1-Data"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">🗂️</span>
+                    <span>Data</span>
+                  </a>
+                </span>
+                <!-- Demo Link. -->
+                <span class="link-block">
+                  <a href="xxxxx" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-play"></i>
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- teaser -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <figure style="text-align: center;">
+          <img src="static/images/intro.png" style="width: 100%;" />
+        </figure>
+        <h2 class="subtitle has-text-centered">
+          VideoAuto-R1 follows a thinking once, answering twice paradigm
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Chain-of-thought (CoT) reasoning has emerged as a powerful tool for multimodal large language models on
+              video understanding tasks. However, its necessity and advantages over direct answering remain
+              underexplored. In this paper, we first demonstrate that for RL-trained video models, direct answering
+              often matches or even surpasses CoT performance, despite CoT producing step-by-step analyses at a higher
+              computational cost.
+            </p>
+            <p>
+              Motivated by this, we propose <strong>VideoAuto-R1</strong>, a video understanding framework
+              that adopts a <em>"reason-when-necessary"</em> strategy. During training, our approach follows a
+              <strong>Thinking Once, Answering Twice</strong> paradigm: the model first generates an initial answer,
+              then performs reasoning, and finally outputs a reviewed answer. Both answers are supervised via verifiable
+              rewards. During inference, the model uses the confidence score of the initial answer to determine whether
+              to proceed with reasoning.
+            </p>
+            <p>
+              Across video QA and grounding benchmarks, VideoAuto-R1 achieves
+              state-of-the-art accuracy with significantly improved efficiency, reducing the average response length by
+              &sim;3.3x, e.g., from 144 to just 44 tokens. Moreover, we observe a low rate of thinking-mode activation
+              on perception-oriented tasks, but a higher rate on reasoning-intensive tasks. This suggests that explicit
+              language-based reasoning is generally beneficial but not always necessary.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Method -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+            <p>
+              <strong>(a) Training:</strong> The response follows the <em>answer &rarr; think
+                &rarr; answer</em> template, jointly optimizing both the initial and reviewed answers. Specifically, a
+              fallback reward is introduced to avoid a spurious initial guess.
+            </p>
+            <p>
+              <strong>(b) Inference:</strong> The model
+              first
+              produces an initial answer. If its length-normalized confidence exceeds a threshold &tau;, decoding
+              terminates as direct answering; otherwise, the model continues with CoT reasoning and outputs a reviewed
+              answer, enabling adaptive, confidence-based early exit.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered mt-4">
+        <div class="column is-full">
+          <figure style="text-align: center;">
+            <img src="static/images/method.png" style="width: 100%;" alt="Overview of VideoAuto-R1" />
+            <figcaption class="is-size-6 has-text-grey mt-2">
+              Overview of VideoAuto-R1
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <!--/ Method -->
+
+      <!-- Results on Video QA Benchmarks -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Results on Video QA Benchmarks</h2>
+          <!-- <div class="content has-text-justified">
+            <p>
+              xxx
+            </p>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered mt-4">
+        <div class="column is-full">
+          <figure style="text-align: center;">
+            <img src="static/images/results_qa.png" style="width: 100%;" />
+          </figure>
+        </div>
+      </div>
+      <!--/ Results on Video QA Benchmarks -->
+
+      <!-- Results on Temporal Grounding Benchmarks -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Results on Temporal Grounding Benchmarks</h2>
+          <!-- <div class="content has-text-justified">
+            <p>
+              xxx
+            </p>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered mt-4">
+        <div class="column is-full">
+          <figure style="text-align: center;">
+            <img src="static/images/results_grounding.png" style="width: 100%;" />
+          </figure>
+        </div>
+      </div>
+      <!--/ Results on Video QA Benchmarks -->
+
+      <!-- Qualitative Results -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Qualitative Results</h2>
+          <!-- <div class="content has-text-justified">
+            <p>
+              xxx
+            </p>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered mt-4">
+        <div class="column is-full">
+          <figure style="text-align: center;">
+            <img src="static/images/example_direct.png" style="width: 46.5%;" />
+            <img src="static/images/example_think.png" style="width: 51%;" />
+            <figcaption class="is-size-6 has-text-grey mt-2">
+              VideoAuto-R1 on Perception-Oriented QA (left) and Reasoning-Oriented QA (right)
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <!--/ Qualitative Results -->
+
+
+    </div>
+  </section>
+
+  <!--  Bibtext -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>TBD</code></pre>
+      <!-- <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre> -->
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed
+              under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+                Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
